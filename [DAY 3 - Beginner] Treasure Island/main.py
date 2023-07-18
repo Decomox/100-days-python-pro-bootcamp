@@ -1,10 +1,8 @@
 import colorama
 from colorama import Fore, Style
 
-# Initialize colorama
 colorama.init()
 
-# Define the ASCII art
 art = f'''
 {Fore.YELLOW}*******************************************************************************
           |                   |                  |                     |
@@ -28,25 +26,20 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 *******************************************************************************{Style.RESET_ALL}
 '''
 
-# Print the ASCII art
 print(art)
 
-# Print the game instructions
 print(f"{Fore.CYAN}Welcome to Treasure Island.")
 print("Your mission is to find the legendary treasure of the Lost City.")
 
-# Get the user's input for choice1
 choice1 = input(f'{Fore.GREEN}You\'re at a crossroad. Where do you want to go? Type "left" or "right"\nYOUR CHOICE: ').lower()
 
 if choice1 == "left":
     print("------------------\nYou follow the left path and enter a dark forest. You come across two signs:")
     print("One points to a dangerous cave, and the other to a mysterious temple.")
-    # Get the user's input for choice2
     choice2 = input(f'{Fore.GREEN}Which path will you choose? Type "cave" or "temple"\nYOUR CHOICE: ').lower()
 
     if choice2 == "cave":
         print("------------------\nYou enter the cave and find yourself surrounded by treasures. However, a ferocious dragon blocks your way.")
-        # Get the user's input for choice3
         choice3 = input(f'{Fore.GREEN}How do you handle the dragon? Type "fight" or "sneak"\nYOUR CHOICE: ').lower()
 
         if choice3 == "fight":
@@ -54,12 +47,10 @@ if choice1 == "left":
             print(f"{Fore.RED}Game Over.")
         elif choice3 == "sneak":
             print("------------------\nYou stealthily move past the dragon, grab a handful of treasures, and make your way out of the cave.")
-            # Get the user's input for choice4
             choice4 = input(f'{Fore.GREEN}You find a hidden passage. Do you want to explore it? Type "yes" or "no"\nYOUR CHOICE: ').lower()
 
             if choice4 == "yes":
                 print("------------------\nYou follow the hidden passage and discover an underground river. You build a raft and sail downstream.")
-                # Get the user's input for choice5
                 choice5 = input(f'{Fore.GREEN}As you sail, you see two paths: one leading to a waterfall and the other to a serene island. Which path do you choose? Type "waterfall" or "island"\nYOUR CHOICE: ').lower()
 
                 if choice5 == "waterfall":
@@ -80,7 +71,6 @@ if choice1 == "left":
     elif choice2 == "temple":
         print("------------------\nYou enter the ancient temple and find yourself in front of three altars:")
         print("One made of gold, one made of silver, and one made of bronze.")
-        # Get the user's input for choice6
         choice6 = input(f'{Fore.GREEN}Which altar do you approach? Type "gold", "silver", or "bronze"\nYOUR CHOICE: ').lower()
 
         if choice6 == "gold":
@@ -105,7 +95,6 @@ if choice1 == "left":
 else:
     print("------------------\nYou take the right path and come across a deep river. You have two options:")
     print("Swim across or build a raft.")
-    # Get the user's input for choice7
     choice7 = input(f'{Fore.GREEN}How do you plan to cross the river? Type "swim" or "raft"\nYOUR CHOICE: ').lower()
 
     if choice7 == "swim":
